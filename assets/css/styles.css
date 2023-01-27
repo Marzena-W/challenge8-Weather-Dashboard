@@ -42,6 +42,10 @@ h1 {
     border: 1px solid black;
     letter-spacing: 1px;
 }
+#search-input:focus {
+    outline: none !important;
+    box-shadow: none;
+}
 
 ::placeholder {
     font-style: italic;
@@ -75,4 +79,15 @@ h1 {
     background-color: rgb(227, 227, 227);
     border: none;
     padding: 5px;
+}
+
+.cityBtn:focus {
+    outline: none !important;
+    box-shadow: none;
+}
+
+.cityBtn:hover {
+    background-color: rgb(249, 185, 37) !important;
+    border: none;
+    color: black;
 }

@@ -30,6 +30,7 @@ function showCityWeather() {
         $("#today").append(windTag);
         $("#today").append(humidityTag);
     })
+    $("#search-input").val("");
     renderCityBtns()
 }
 
@@ -37,7 +38,6 @@ function showCity() {
     $("#search-button").on("click", function (event) {
         event.preventDefault();
         showCityWeather();
-        $("#search-input").val("");
     })
 };
 
