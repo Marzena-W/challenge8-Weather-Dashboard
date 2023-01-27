@@ -33,6 +33,7 @@ h1 {
 #search-button:hover {
     background-color: rgb(249, 185, 37) !important;
     border: none;
+    color: black;
 }
 
 #search-input {
@@ -40,6 +41,12 @@ h1 {
     border-radius: 5px;
     border: 1px solid black;
     letter-spacing: 1px;
+}
+
+::placeholder {
+    font-style: italic;
+    color: rgb(206, 205, 205);
+    font-size: 16px;
 }
 
 .hr {
@@ -60,4 +67,12 @@ h1 {
     border: 1px solid black;
     height: auto;
     padding: 10px 10px 10px 15px;
+}
+
+.cityBtn {
+    margin-bottom: 10px;
+    border-radius: 5px;
+    background-color: rgb(227, 227, 227);
+    border: none;
+    padding: 5px;
 }
