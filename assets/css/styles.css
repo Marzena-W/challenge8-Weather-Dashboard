@@ -1,0 +1,32 @@
+.weather-header{
+    background-image: linear-gradient(to right,  rgb(76, 145, 230), rgb(10, 74, 159));  
+}
+h1 {
+    padding: 20px 0px;
+    font-weight: bold !important;
+    letter-spacing: 2px;
+}
+#form-heading {
+    font-weight: bold;
+}
+aside {
+    display: block;
+}
+
+#search-button {
+    background-color: rgb(76, 145, 230);
+    color: rgb(252, 252, 252);
+    border-radius: 5px;
+}
+#search-input{
+    padding-left: 10px;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+.hr {
+    border-bottom: 1px solid black !important;
+}
+#today {
+    border: 1px solid black;
+    height: 200px;
+}
