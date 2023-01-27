@@ -1,6 +1,7 @@
 body {
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
 }
+
 .weather-header {
     background-image: linear-gradient(to right, rgb(76, 145, 230), rgb(10, 74, 159));
 }
@@ -23,6 +24,17 @@ h1 {
     font-size: 14px;
 }
 
+#search-button:focus {
+    outline: none !important;
+    border: none !important;
+    box-shadow: none;
+}
+
+#search-button:hover {
+    background-color: rgb(249, 185, 37) !important;
+    border: none;
+}
+
 #search-input {
     padding-left: 10px;
     border-radius: 5px;
@@ -37,11 +49,13 @@ h1 {
     margin-right: auto;
     background: black;
 }
+
 .cityname {
     font-size: 35px;
     font-weight: bold;
     padding-bottom: 20px;
 }
+
 #today {
     border: 1px solid black;
     height: auto;
