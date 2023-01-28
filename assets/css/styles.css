@@ -22,6 +22,7 @@ h1 {
     color: rgb(252, 252, 252);
     border-radius: 5px;
     font-size: 14px;
+    width: 100%;
 }
 
 #search-button:focus {
@@ -41,6 +42,7 @@ h1 {
     border-radius: 5px;
     border: 1px solid black;
     letter-spacing: 1px;
+    margin-right: 20px;
 }
 #search-input:focus {
     outline: none !important;
@@ -54,11 +56,7 @@ h1 {
 }
 
 .hr {
-    border: 0;
-    height: 1px;
-    margin-left: auto;
-    margin-right: auto;
-    background: black;
+    border: 1px solid black;
 }
 
 .cityname {
@@ -71,6 +69,7 @@ h1 {
     border: 1px solid black;
     height: auto;
     padding: 10px 10px 10px 15px;
+    margin-left: -15px;
 }
 
 .cityBtn {
