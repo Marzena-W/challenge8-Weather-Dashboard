@@ -1,5 +1,4 @@
 var cities = [];
-console.log(cities);
 
 function showCityWeather() {
     var city = $("#search-input").val().trim();
@@ -20,15 +19,16 @@ function showCityWeather() {
 
         var today = moment().format("L");
 
-        var cityName = $("<h4 class='cityname'>").text(city + " (" + today + ")");
+        var iconPath = response.weather[0].icon;
+        var iconUrl = "https://openweathermap.org/img/wn/" + iconPath + ".png";
+        var icon = $("<img>").attr("src", iconUrl);
+
+        var cityName = $("<h4 class='cityname'>").append(city + " (" + today + ")", icon);
         var tempTag = $("<p>").text("Temp: " + tempC + " °C");
         var windTag = $("<p>").text("Wind: " + wind + " KPH");
         var humidityTag = $("<p>").text("Humidity: " + humidity + "%");
 
-        $("#today").append(cityName);
-        $("#today").append(tempTag);
-        $("#today").append(windTag);
-        $("#today").append(humidityTag);
+        $("#today").append(cityName, tempTag, windTag, humidityTag);
     })
     $("#search-input").val("");
     renderCityBtns()
