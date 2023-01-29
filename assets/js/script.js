@@ -34,17 +34,44 @@ function showCityWeather(city) {
         var iconUrl = "https://openweathermap.org/img/wn/" + iconPath + ".png";
         var icon = $("<img>").attr("src", iconUrl);
 
-        var cityName = $("<h4 class='cityname'>").append(city, " (",  today, ")", icon);
+        var cityName = $("<h4 class='cityname'>").append(city, " (", today, ")", icon);
         var tempTag = $("<p>").text("Temp: " + tempC + " °C");
         var windTag = $("<p>").text("Wind: " + wind + " KPH");
         var humidityTag = $("<p>").text("Humidity: " + humidity + "%");
 
         $("#today").append(cityName, tempTag, windTag, humidityTag);
     })
+
+
+    // forecast for 5 days
+    var myQueryURL = "https://api.openweathermap.org/data/2.5/forecast?q=" + city + "&appid=e3fca67d9cc333a831026c5f07c8ba92";
+
+    $.ajax({
+        url: myQueryURL,
+        method: "GET"
+    }).then(function (responseForecast) {
+        console.log(myQueryURL);
+
+        $("#forecast").empty();
+        var show5Days = $("<h4 class='days5'>").text("5-Day Forecast:");
+        $("#forecast").append(show5Days);
+
+        
+
+
+
+
+        
+
+        $("#forecast").append();
+    })
+    // clearing search input field
     $("#search-input").val("");
+    // calling a function to render buttons for searched city
     renderCityBtns()
 }
 
+// rendering buttons for each searched city
 function renderCityBtns() {
     $("#history").empty();
     if (localStorage.getItem("cities")) {

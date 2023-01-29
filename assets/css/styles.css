@@ -90,3 +90,9 @@ h1 {
     border: none;
     color: black;
 }
+
+.days5 {
+    font-size: 25px;
+    font-weight: bold;
+    padding-bottom: 20px;
+}
