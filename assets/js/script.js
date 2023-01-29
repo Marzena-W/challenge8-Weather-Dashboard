@@ -40,6 +40,7 @@ function showCityWeather(city) {
         var humidityTag = $("<p>").text("Humidity: " + humidity + "%");
 
         $("#today").append(cityName, tempTag, windTag, humidityTag);
+        $("#today").css("border", "border: 1px solid black;")
     })
 
 
@@ -49,22 +50,42 @@ function showCityWeather(city) {
     $.ajax({
         url: myQueryURL,
         method: "GET"
-    }).then(function (responseForecast) {
+    }).then(function (forecast) {
         console.log(myQueryURL);
 
+        var daysResult = forecast.list;
+        console.log(daysResult);
+
         $("#forecast").empty();
-        var show5Days = $("<h4 class='days5'>").text("5-Day Forecast:");
+        var show5Days = $("<h4 class='daysHeader'>").text("5-Day Forecast:");
         $("#forecast").append(show5Days);
+        var next = 0;
 
+        for (var i = 5; i < daysResult.length; i += 8) {
+            var daysDiv = $("<div class='daysDivs'>");
         
+            next += 1;
+            var daysDate = moment().add(next, "day").format("L"); 
+            var daysDateTag = $("<p>").text(daysDate);
 
+            var daysIconPath = forecast.list[i].weather[0].icon;
+            var daysIconPathUrl = "https://openweathermap.org/img/wn/" + daysIconPath + ".png";
+            var daysIcon = $("<img>").attr("src", daysIconPathUrl);
 
+            var daysTempK = forecast.list[i].main.temp;
+            var daysTempC = parseFloat(daysTempK - 273.15).toFixed(1);
+            var daysWind = forecast.list[i].wind.speed;
+            var daysHumidity = forecast.list[i].main.humidity;
+            
+            var daysTempTag = $("<p>").text("Temp: " + daysTempC + " °C");
+            var daysWindTag = $("<p>").text("Wind: " + daysWind + " KPH");
+            var daysHumidityTag = $("<p>").text("Humidity: " + daysHumidity + "%");
 
+            daysDiv.append(daysDateTag, daysIcon, daysTempTag, daysWindTag, daysHumidityTag);
+            $("#forecast").append(daysDiv);
+        }
+    });
 
-        
-
-        $("#forecast").append();
-    })
     // clearing search input field
     $("#search-input").val("");
     // calling a function to render buttons for searched city

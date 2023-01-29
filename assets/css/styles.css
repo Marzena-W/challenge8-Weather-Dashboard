@@ -69,7 +69,6 @@ h1 {
     border: 1px solid black;
     height: auto;
     padding: 10px 10px 10px 15px;
-    margin-left: -15px;
 }
 
 .cityBtn {
@@ -91,8 +90,19 @@ h1 {
     color: black;
 }
 
-.days5 {
+.daysHeader {
     font-size: 25px;
     font-weight: bold;
     padding-bottom: 20px;
+    width: 100%;
+    margin-left: 15px;
+}
+
+.daysDivs {
+    background-color: rgb(16, 59, 114);
+    margin-right: 15px;
+    padding: 20px 30px;
+    border-radius: 2px;
+    color: rgb(255, 254, 254);
+    margin: -20px 0 40px 15px;
 }
