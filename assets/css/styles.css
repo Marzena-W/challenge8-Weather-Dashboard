@@ -17,12 +17,44 @@ h1 {
     padding-top: 10px;
 }
 
-#search-button {
-    background-color: rgb(76, 145, 230);
-    color: rgb(252, 252, 252);
+.form-inline {
+    display: block !important;
+}
+
+.input-group {
+    display: block !important;
+}
+
+#search-input {
+    padding-left: 10px;
     border-radius: 5px;
+    border: 1px solid black;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    width: 100% !important;
+    height: 40px;
+}
+
+#search-input:focus {
+    outline: none !important;
+    box-shadow: none;
+}
+
+::placeholder {
+    font-style: italic;
+    color: rgb(206, 205, 205);
     font-size: 14px;
-    width: 100%;
+}
+
+.search-button {
+    background-color: rgb(76, 145, 230) !important;
+    color: rgb(252, 252, 252) !important;
+    border-radius: 5px !important;
+    font-size: 14px;
+    outline: none !important;
+    border: none !important;
+    display: block !important;
+    width: 100% !important;
 }
 
 #search-button:focus {
@@ -37,38 +69,8 @@ h1 {
     color: black;
 }
 
-#search-input {
-    padding-left: 10px;
-    border-radius: 5px;
-    border: 1px solid black;
-    letter-spacing: 1px;
-    margin-right: 20px;
-}
-
-#search-input:focus {
-    outline: none !important;
-    box-shadow: none;
-}
-
-::placeholder {
-    font-style: italic;
-    color: rgb(206, 205, 205);
-    font-size: 16px;
-}
-
 .hr {
     border: 0.6px solid black;
-}
-
-.cityname {
-    font-size: 35px;
-    font-weight: bold;
-    padding-bottom: 20px;
-}
-
-#today {
-    height: auto;
-    padding: 10px 10px 10px 15px;
 }
 
 .cityBtn {
@@ -77,6 +79,7 @@ h1 {
     background-color: rgb(227, 227, 227);
     border: none;
     padding: 5px;
+    font-size: 15px;
 }
 
 .cityBtn:focus {
@@ -90,6 +93,17 @@ h1 {
     color: black;
 }
 
+.cityname {
+    font-size: 35px;
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+
+#today {
+    height: auto;
+    padding: 10px 10px 10px 15px;
+}
+
 .daysHeader {
     font-size: 25px;
     font-weight: bold;
@@ -101,8 +115,9 @@ h1 {
 .daysDivs {
     background-color: rgb(16, 59, 114);
     margin-right: 15px;
-    padding: 20px 30px;
+    padding: 20px 20px;
     border-radius: 2px;
     color: rgb(255, 254, 254);
     margin: -20px 0 40px 15px;
+    width: 170px;
 }
