@@ -30,7 +30,7 @@ function showCityWeather(city) {
         var tempK = response.main.temp;
         var tempC = parseFloat(tempK - 273.15).toFixed(1);
         // adding date
-        var today = moment().format("L");
+        var today = moment().format("DD/MM/YYYY");
         // adding weather icon
         var iconPath = response.weather[0].icon;
         var iconUrl = "https://openweathermap.org/img/wn/" + iconPath + ".png";
@@ -42,10 +42,11 @@ function showCityWeather(city) {
         var humidityTag = $("<p>").text("Humidity: " + humidity + "%");
         // appending to the website
         $("#today").append(cityName, tempTag, windTag, humidityTag);
-        $("#today").css("border", "border: 1px solid black;")
+        $("#today").css("border", "1px solid black")
     })
 
     // forecast for 5 days
+    // creating url showing showing forecast for the next five days 
     var myQueryURL = "https://api.openweathermap.org/data/2.5/forecast?q=" + city + "&appid=e3fca67d9cc333a831026c5f07c8ba92";
 
     $.ajax({
@@ -66,7 +67,7 @@ function showCityWeather(city) {
             var daysDiv = $("<div class='daysDivs'>");
             // adding next five dates
             next += 1;
-            var daysDate = moment().add(next, "day").format("L");
+            var daysDate = moment().add(next, "day").format("DD/MM/YYYY");
             var daysDateTag = $("<p>").text(daysDate);
             // adding weather icon
             var daysIconPath = forecast.list[i].weather[0].icon;

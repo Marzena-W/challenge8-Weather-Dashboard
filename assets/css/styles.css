@@ -44,6 +44,7 @@ h1 {
     letter-spacing: 1px;
     margin-right: 20px;
 }
+
 #search-input:focus {
     outline: none !important;
     box-shadow: none;
@@ -66,7 +67,6 @@ h1 {
 }
 
 #today {
-    border: 1px solid black;
     height: auto;
     padding: 10px 10px 10px 15px;
 }
