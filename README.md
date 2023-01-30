@@ -1,7 +1,7 @@
 # challenge8-Weather-Dashboard
 
 # Description 
-> In challenge 7 I created  a weather dashboard applicaiton showing current and future conditions for a city and the city is added to the search history.
+> In challenge 8 I created  a weather dashboard applicaiton showing current and future conditions for a city and the city is added to the search history.
 
 
 ## Usage 
