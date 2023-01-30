@@ -19,6 +19,7 @@ To access the solution open the below link to deployed application.
 * How to display icon - [https://stackoverflow.com/questions/44177417/how-to-display-openweathermap-weather-icon]
 * momentjs - [https://momentjs.com/docs/#/displaying/]
 * To see website updates - Live Server - [https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer]
+* To have the first letter capitalized - [https://flexiple.com/javascript/javascript-capitalize-first-letter/]
 
 
 ## License

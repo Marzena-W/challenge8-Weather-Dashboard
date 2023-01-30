@@ -4,13 +4,14 @@ function showCity() {
     $("#search-button").on("click", function (event) {
         event.preventDefault();
         var city = $("#search-input").val().trim();
+        city = city.charAt(0).toUpperCase() + city.slice(1);
         showCityWeather(city);
     })
 };
 
 function showCityWeather(city) {
     // checking if the city is already in the array
-    if (cities.includes(city) === false) {
+    if (cities.includes(city) == false) {
         cities.push(city);
         localStorage.setItem("cities", JSON.stringify(cities));
     }
