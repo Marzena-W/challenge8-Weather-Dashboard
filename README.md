@@ -9,7 +9,7 @@ To access the solution open the below link to deployed application.
 * Deployed application - [https://marzena-w.github.io/weather-dashboard/]
 * search city you want to check weather for
 * Click Search button on the right
-* Screenshot of the challenge8:
+* Screenshot:
 ![Screenshot](./images/challenge8-weather-app.png)
 
 
